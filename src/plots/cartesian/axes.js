@@ -1414,7 +1414,9 @@ function formatLinear(ax, out, hover, extraPrecision, hideexp) {
         // ONLY tick to get an exponent (first or last)
         hideexp = 'hide';
     }
-    out.text = numFormat(out.x, ax, hideexp, extraPrecision);
+
+    if (ax.customTickFn) out.text = ax.customTickFn(out.x);
+    else out.text = numFormat(out.x, ax, hideexp, extraPrecision);
 }
 
 function formatAngle(ax, out, hover, extraPrecision, hideexp) {

@@ -391,6 +391,14 @@ module.exports = {
             'Has an effect only if `tickmode` is set to *auto*.'
         ].join(' ')
     },
+    customTickFn: {
+        valType: 'any',
+        role: 'style',
+        editType: 'ticks',
+        description: [
+            'Custom tick label based on x'
+        ].join(' ')
+    },
     tick0: {
         valType: 'any',
         role: 'style',

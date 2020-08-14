@@ -42,6 +42,8 @@ function handleOtherDefaults(containerIn, containerOut, coerce, axType, options)
     var tickSuffix = coerce('ticksuffix', options.tickSuffixDflt);
     if(tickSuffix) coerce('showticksuffix', showAttrDflt);
 
+    coerce('customTickFn');
+
     var showTickLabels = coerce('showticklabels');
     if(showTickLabels) {
         var font = options.font || {};
